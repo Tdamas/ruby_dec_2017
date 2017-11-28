@@ -26,16 +26,7 @@ NOTE: If you don't get in at least one pull request daily, then *_ya ain't serio
 ## Videos
 Virtualbox/Vagrant - https://youtu.be/ipEVDCdk3po <br>
 Fundamentals - https://youtu.be/cFdMPCl1Rr0 <br>
-
-
-Self Join Many To Many - https://youtu.be/fhCNn1XTuy0 <br>
-Social Network, Self Join Many To Many https://youtu.be/_OsYvpndaX4
-
-Relations are Hard - https://youtu.be/YW6X53ia2Z8 <br>
-
-Deployment - https://youtu.be/V2Frb35zpBA <br>
-
-Sort by count of a relation - https://youtu.be/p5UOxHR2200 <br>
+OOP - https://youtu.be/Lr1YSKSVM8Q <br>
 
 ## Resources
 
