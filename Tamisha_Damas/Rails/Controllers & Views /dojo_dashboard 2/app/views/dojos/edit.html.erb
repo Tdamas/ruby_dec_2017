@@ -1,0 +1,32 @@
+<h1>Editing <%= @dojo.branch %></h1>
+
+<% if flash[:errors] %>
+	<% flash[:errors].each do |error| %>
+		<p><%= error %></p>
+	<% end %>
+<% end %>
+
+<form action="/dojos/<%= @dojo.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Branch:</label>
+  <input type="text" name="dojo[branch]" value="<%= @dojo.branch %>">
+  <br>
+  <br>
+  <label>Street:</label>
+  <input type="text" name="dojo[street]" value="<%= @dojo.branch %>">
+  <br>
+  <br>
+  <label>City:</label>
+  <input type="text" name="dojo[city]" value="<%= @dojo.city %>">
+  <br>
+  <br>
+  <label>State:</label>
+  <input type="text" name="dojo[state]" value="<%= @dojo.state %>">
+  <br>
+  <br><input type="submit" value="Create">
+	<!--So long as the submit button is wrapped within the form it will perform the " form Action"
+  	posting the data to the route. in this case the root route which is index.html-->
+</form>
+<a href="/">Home</a>
+<a href="/dojos/<%= @dojo.id %>">Show</a>

@@ -1,0 +1,32 @@
+<h4>New Student</h4>
+
+
+
+<form action="<%= create_student_path  %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>First Name:</label>
+  <input type="text" name="student[first_name]">
+  <br>
+  <br>
+  <label>Last Name:</label>
+  <input type="text" name="student[last_name]">
+  <br>
+  <br>
+  <label>Email:</label>
+  <input type="text" name="student[email]">
+  <br>
+  <br>
+  <label>Dojo:</label>
+  <select name="student[dojo_id]">
+      <% @dojos.each do |dojo| %>
+        <option <%= 'selected' if dojo.id == params[:dojo_id].to_i %> value="<%= dojo.id %>"><%= dojo.branch %></option>
+      <% end %>
+  </select>
+  <br>
+  <br>
+  <input type="submit" value="Create">
+	<!--So long as the submit button is wrapped within the form it will perform the " form Action"
+  	posting the data to the route.-->
+</form>
+<br>
+<a href="<%= dojos_path %>">Home</a>

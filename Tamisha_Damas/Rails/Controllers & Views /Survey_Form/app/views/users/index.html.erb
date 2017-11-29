@@ -1,0 +1,38 @@
+<h1>Welcome!</h1>
+
+<form action="/users" method="post">
+  <!-- Action = to url in routes.rb and routes direct the action to the apppropriate method  -->
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label>Your Name:</label>
+  <input type="text" name="name">
+
+  <br>
+
+  <label>Dojo Location:</label>
+  <select name="location">
+    <option value="Mountain View, WA">Mountain View, WA</option>
+    <option value="Dallas, TX">Dallas, TX</option>
+    <option value="Tulsa, OK">Tulsa, OK</option>
+    <option value="San Francisco, CA">San Francisco, CA</option>
+  </select>
+
+  <br>
+
+  <label>Favorite Language:</label>
+  <select name="language" >
+    <option value="Ruby">Ruby</option>
+    <option value="Python">Python</option>
+    <option value="MEAN">MEAN</option>
+    <option value="Javascript">Javascript</option>
+  </select>
+
+  <br>
+
+  <label>Comment (Optional):</label>
+  <br>
+  <textarea name="comment" rows="4" cols="60"></textarea>
+
+  <br>
+
+  <input type="submit" value="Submit">
+</form>
