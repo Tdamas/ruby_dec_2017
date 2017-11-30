@@ -1,6 +1,7 @@
 class Mammal
   def health
     @health = 150
+    self
   end
 
   def display_all

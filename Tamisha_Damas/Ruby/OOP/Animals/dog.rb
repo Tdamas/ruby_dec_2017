@@ -14,7 +14,7 @@ class Dog < Mammal # Dog inherits from Mammal
   end
 end
 Dog1 = Dog.new
-Dog1.health
+Dog1.health.display_all
 Dog1.walk.walk.walk.run.run.pet.display_all
 
 3.times { Dog1.walk }
@@ -22,9 +22,9 @@ Dog1.walk.walk.walk.run.run.pet.display_all
 Dog1.pet.display_all
 
 3.times do
-  Dog1.walk.run
+  Dog1.walk.run.display_all
 end
 
 for i in 1..3
-  Dog1.walk
+  Dog1.walk.display_all
 end

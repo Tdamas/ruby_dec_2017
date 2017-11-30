@@ -5,6 +5,7 @@ class Human
     @intelligence = 3
     @stealth = 3
     @health = 100
+    self
   end
   def attack(obj)
     # check if the attacked object's class is Human or inherits from the Human class
@@ -16,5 +17,8 @@ class Human
     else
       false
     end
+  end
+  def display_all
+    puts "Health is #{@health}"
   end
 end
