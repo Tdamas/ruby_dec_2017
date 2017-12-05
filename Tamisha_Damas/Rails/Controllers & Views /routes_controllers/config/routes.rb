@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
-  get 'displays/index'
+get "hello" => "display#index"
+get "say/hello" => "display#hello"
+get "say/hello/joe" => "display#joe"
+get "say/hello/michael" => "display#michael"
+root "display#say"
+get "times" => "display#times"
+get "times/restart" => "display#restart"
 
-  get 'displays/hello'
 
-  get 'displays/say'
-  get 'displays/say/hello' => 'displays#say'
-  get 'displays/say/hello/:name' => 'displays#say'
 
-  get 'displays/times'
 
-  get 'displays/restart'
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
