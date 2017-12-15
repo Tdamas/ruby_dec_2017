@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-sm-8">
+    <h1>Register</h1>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <form action="<%= register_path %>" method="post" class="form">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <!-- First Name -->
+      <div class="form-group">
+        <input type="text" name="user[first_name]"class="form-control" id="first_name" placeholder="Enter First Name">
+        <%= render "partials/errors", input: 'first_name', form: 'register' %>
+      </div>
+      <!--  -->
+
+      <!-- Last Name -->
+      <div class="form-group">
+        <input type="text" name="user[last_name]"class="form-control" id="last_name" placeholder="Enter Last Name">
+        <%= render "partials/errors", input: 'last_name', form: 'register' %>
+      </div>
+      <!--  -->
+
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" name="user[email]"class="form-control" id="email" placeholder="Enter Email">
+        <%= render "partials/errors", input: 'email', form: 'register' %>
+      </div>
+      <!--  -->
+
+      <!-- Password -->
+      <div class="form-group">
+        <input type="password" name="user[password]"class="form-control" id="password" placeholder="Enter Password">
+        <%= render "partials/errors", input: 'password', form: 'register' %>
+      </div>
+      <!--  -->
+
+      <!-- Password Confirmation -->
+      <div class="form-group">
+        <input type="password" name="user[password_confirmation]"class="form-control" id="password_confirmation" placeholder="Password Confirmation">
+        <%= render "partials/errors", input: 'password_confirmation', form: 'register' %>
+      </div>
+      <!--  -->
+
+      <!-- Submit -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-8">
+    <h1>Login</h1>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <form action="<%= login_path %>" method="post" class="form">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" name="email"class="form-control" id="email" placeholder="Enter Email">
+        <%= render "partials/login", input: 'email', form: 'login' %>
+      </div>
+
+      <div class="form-group">
+        <input type="password" name="password"class="form-control" id="password" placeholder="Enter Password">
+        <%= render "partials/login", input: 'password', form: 'login' %>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+    </form
+  </div>
+</div>

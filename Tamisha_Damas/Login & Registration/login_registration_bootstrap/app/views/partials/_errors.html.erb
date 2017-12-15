@@ -1,0 +1,9 @@
+<% if flash[:errors] %>
+  <% if flash[:errors][input] && flash[:errors]["form"][0] == form %>
+    <ul>
+      <% flash[:errors][input].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
