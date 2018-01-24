@@ -1,0 +1,26 @@
+To run your first ruby code
+start your vagrant machine by running the following command:
+vagrant up
+vagrant ssh
+cd /vagrant
+touch first_ruby_file.rb
+
+open the file in your terminal. Copy this code into the file:
+// Ruby code
+arr = ["I", "code", "therefore", "I", "am"]
+for i in 0...arr.count
+  puts arr[i]
+end
+
+// Javascript equivalent
+# var arr = ["Ruby", "Is", "Life"];
+# for(var i = 0; i < arr.length; i++) {
+#     console.log(arr[i]);
+# }
+
+$ ruby first_ruby_file.rb  // Type this command to see your output:
+I
+code
+therefore
+I
+am
